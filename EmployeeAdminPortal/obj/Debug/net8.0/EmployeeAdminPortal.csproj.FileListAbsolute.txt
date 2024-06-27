@@ -270,3 +270,4 @@ C:\Users\DonGallegos\Desktop\CRUD API Assignment\EmployeeAdminPortal\EmployeeAdm
 C:\Users\DonGallegos\Desktop\CRUD API Assignment\EmployeeAdminPortal\EmployeeAdminPortal\obj\Debug\net8.0\EmployeeAdminPortal.pdb
 C:\Users\DonGallegos\Desktop\CRUD API Assignment\EmployeeAdminPortal\EmployeeAdminPortal\obj\Debug\net8.0\EmployeeAdminPortal.genruntimeconfig.cache
 C:\Users\DonGallegos\Desktop\CRUD API Assignment\EmployeeAdminPortal\EmployeeAdminPortal\obj\Debug\net8.0\ref\EmployeeAdminPortal.dll
+C:\Users\DonGallegos\Desktop\CRUD API Assignment\EmployeeAdminPortal\EmployeeAdminPortal\obj\Debug\net8.0\EmployeeAdminPortal.sourcelink.json

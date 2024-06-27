@@ -31,9 +31,9 @@ namespace EmployeeAdminPortal.Controllers
         /* dtg: Get employee by id */
         [HttpGet]
         [Route("{id:guid}")]
-        public IActionResult GetEmployeeById(Guid id)
+        public async Task<IActionResult> GetEmployeeById(Guid id)
         {
-            var employee = dbContext.Employees.Find(id);
+            var employee = await dbContext.Employees.FindAsync(id);
 
             if (employee is null)
             {
@@ -45,7 +45,7 @@ namespace EmployeeAdminPortal.Controllers
 
         /* dtg: Add employee */
         [HttpPost]
-        public IActionResult AddEmployee(AddEmployeeDto addEmployeeDto)
+        public async Task<IActionResult> AddEmployee(AddEmployeeDto addEmployeeDto)
         {
             var employeeEntity = new Employee()
             {
@@ -56,7 +56,7 @@ namespace EmployeeAdminPortal.Controllers
             };
 
             dbContext.Employees.Add(employeeEntity);
-            dbContext.SaveChanges();
+            await dbContext.SaveChangesAsync();
 
             return Ok(employeeEntity);
         }
@@ -64,9 +64,9 @@ namespace EmployeeAdminPortal.Controllers
         /* dtg: Update employee by id */
         [HttpPut]
         [Route("{id:guid}")]
-        public IActionResult UpdateEmployee(Guid id, UpdateEmployeeDto updateEmployeeDto)
+        public async Task<IActionResult> UpdateEmployee(Guid id, UpdateEmployeeDto updateEmployeeDto)
         {
-            var employee = dbContext.Employees.Find(id);
+            var employee = await dbContext.Employees.FindAsync(id);
 
             if(employee is null)
             {
@@ -86,9 +86,9 @@ namespace EmployeeAdminPortal.Controllers
         /* dtg: Delete employee by id */
         [HttpDelete]
         [Route("{id:guid}")]
-        public IActionResult DeleteEmployee(Guid id)
+        public async Task<IActionResult> DeleteEmployee(Guid id)
         {
-            var employee = dbContext.Employees.Find(id);
+            var employee = await dbContext.Employees.FindAsync(id);
 
             if(employee is null)
             {
